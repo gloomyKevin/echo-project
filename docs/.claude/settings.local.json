@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"重命名文档为中文，新增技术底座与演进路径:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}
