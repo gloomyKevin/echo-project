@@ -4,6 +4,31 @@
 
 ---
 
+## 部署（让别人访问）
+
+### 方案 A — Netlify Drop（最快，无需账号）
+
+```bash
+npm run build        # 生成 dist/
+```
+
+然后打开 [netlify.com/drop](https://netlify.com/drop)，把 `proto/dist/` 文件夹拖进去，立刻得到一个公网链接。
+
+> 无需注册。链接 24 小时内有效，注册后可永久保留。
+
+---
+
+### 方案 B — Vercel（推荐长期使用）
+
+```bash
+npm run build
+npx vercel dist --prod    # 首次会引导登录/注册
+```
+
+得到 `https://xxx.vercel.app` 永久链接，每次重新 build + 运行上面命令即可更新。
+
+---
+
 ## 启动
 
 ```bash

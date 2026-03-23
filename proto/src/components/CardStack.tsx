@@ -41,15 +41,19 @@ export default function CardStack({ onCheckin }: Props) {
     <div style={styles.container}>
       {/* Background cards (depth effect) */}
       {stack.slice(1, 3).map((sc, i) => (
-        <div
+        <motion.div
           key={sc.card.id}
           style={{
             ...styles.card,
             background: sc.card.coverColor,
-            transform: `scale(${0.94 - i * 0.03}) translateY(${-(i + 1) * 12}px)`,
             zIndex: 10 - i,
             opacity: 0.6 - i * 0.15,
           }}
+          animate={{
+            scale: 0.94 - i * 0.03,
+            translateY: -(i + 1) * 12,
+          }}
+          transition={{ duration: 0.25 }}
         />
       ))}
 
@@ -91,8 +95,8 @@ function SwipeCard({ card, onSwipe, onCheckin }: { card: Card; onSwipe: (c: Card
   const x = useMotionValue(0)
   const rotate = useTransform(x, [-200, 200], [-15, 15])
   const opacity = useTransform(x, [-200, -80, 0, 80, 200], [0.5, 1, 1, 1, 0.5])
-  const likeOpacity = useTransform(x, [0, 60], [0, 1])
-  const nopeOpacity = useTransform(x, [-60, 0], [1, 0])
+  const likeOpacity = useTransform(x, [0, 80], [0, 1])
+  const nopeOpacity = useTransform(x, [-80, 0], [1, 0])
 
   const dragStart = useRef(0)
 

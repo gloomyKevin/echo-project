@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { useStore } from '../store'
 import type { Card, CheckinRecord } from '../types'
 
 interface Props {
@@ -19,7 +18,6 @@ const DIM_LABELS: Record<string, string> = {
 }
 
 export default function Celebration({ card, checkin, onDone }: Props) {
-  const scores = useStore(s => s.dimensionScores)
   const deltas = checkin.dimensionDelta
   const impactedDims = Object.entries(deltas).filter(([, v]) => (v ?? 0) !== 0)
 
@@ -87,7 +85,7 @@ export default function Celebration({ card, checkin, onDone }: Props) {
                   <div
                     style={{
                       ...styles.dimFill,
-                      width: `${(scores[dim as keyof typeof scores] ?? 50)}%`,
+                      width: `${Math.min(((val ?? 0) / 15) * 100, 100)}%`,
                     }}
                   />
                 </div>

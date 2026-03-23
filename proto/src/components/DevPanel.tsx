@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useStore, useClusterProfile } from '../store'
+import { CARDS } from '../data/cards'
 
 const DIM_LABELS: Record<string, string> = {
   health: '健康', finance: '财务', career: '成长',
@@ -20,9 +21,15 @@ export default function DevPanel() {
   const profile = useClusterProfile()
 
   return (
-    <div style={styles.wrapper}>
-      {/* Toggle button */}
+    <motion.div
+      style={styles.wrapper}
+      drag
+      dragMomentum={false}
+      dragElastic={0}
+    >
+      {/* Toggle button — drag handle when panel is closed */}
       <button style={styles.toggle} onClick={() => setOpen(o => !o)}>
+        <span style={{ fontSize: 12, opacity: 0.4, marginRight: 4, letterSpacing: -1 }}>⠿</span>
         <span style={{ fontSize: 14 }}>🛠</span>
         {!open && (
           <span style={{ fontSize: 11, color: 'var(--text-muted)', marginLeft: 4 }}>
@@ -40,11 +47,16 @@ export default function DevPanel() {
             exit={{ opacity: 0, scale: 0.9, y: 10 }}
             transition={{ duration: 0.15 }}
           >
-            {/* Header */}
+            {/* Header — drag handle when panel is open */}
             <div style={styles.panelHeader}>
-              <span style={{ fontWeight: 700, fontSize: 13 }}>Dev Panel</span>
-              <button style={{ color: 'var(--text-muted)', fontSize: 18, lineHeight: 1 }} onClick={() => setOpen(false)}>×</button>
+              <span style={{ fontWeight: 700, fontSize: 13, display: 'flex', alignItems: 'center', gap: 6 }}>
+                <span style={{ opacity: 0.35, letterSpacing: -1 }}>⠿</span>
+                Dev Panel
+              </span>
+              <button style={{ color: 'var(--text-muted)', fontSize: 18, lineHeight: 1 }} onPointerDown={e => e.stopPropagation()} onClick={() => setOpen(false)}>×</button>
             </div>
+            {/* Content area — stop pointer events from reaching the drag listener */}
+            <div onPointerDown={e => e.stopPropagation()}>
 
             {/* Stats row */}
             <div style={styles.statsRow}>
@@ -70,19 +82,20 @@ export default function DevPanel() {
 
             {/* Tab content */}
             <div style={styles.tabContent}>
-              {tab === 'cluster' && <ClusterTab profile={profile} />}
+              {tab === 'cluster' && <ClusterTab profile={profile} checkinCount={checkins.length} />}
               {tab === 'dims' && <DimsTab scores={dimensionScores} />}
-              {tab === 'stack' && <StackTab stack={stack} />}
+              {tab === 'stack' && <StackTab stack={stack} swipeHistory={swipeHistory} />}
             </div>
 
             {/* Reset */}
             <button style={styles.resetBtn} onClick={() => { if (confirm('重置所有数据？')) reset() }}>
               重置数据
             </button>
+            </div>{/* end content onPointerDown */}
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   )
 }
 
@@ -95,11 +108,22 @@ function Stat({ label, value }: { label: string; value: number }) {
   )
 }
 
-function ClusterTab({ profile }: { profile: ReturnType<typeof useClusterProfile> }) {
+function ClusterTab({ profile, checkinCount }: { profile: ReturnType<typeof useClusterProfile>; checkinCount: number }) {
   const { soloVsSocial, indoorVsOutdoor, domainWeights, swipeCount } = profile
 
+  const intensityStatus = checkinCount >= 8
+    ? `高强度 (已解锁全部强度)`
+    : checkinCount >= 3
+      ? `中强度 (打卡 ${checkinCount}/8 解锁高强度)`
+      : `低强度 (打卡 ${checkinCount}/3 解锁中强度)`
+
   if (swipeCount < 5) {
-    return <div style={{ color: 'var(--text-dim)', fontSize: 12, padding: '8px 0' }}>需要至少 5 次滑动才有意义（当前 {swipeCount}）</div>
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <div style={{ color: 'var(--text-dim)', fontSize: 12, padding: '8px 0' }}>需要至少 5 次滑动才有意义（当前 {swipeCount}）</div>
+        <IntensityRow label={intensityStatus} />
+      </div>
+    )
   }
 
   return (
@@ -118,6 +142,15 @@ function ClusterTab({ profile }: { profile: ReturnType<typeof useClusterProfile>
           </div>
         ))}
       </div>
+      <IntensityRow label={intensityStatus} />
+    </div>
+  )
+}
+
+function IntensityRow({ label }: { label: string }) {
+  return (
+    <div style={{ fontSize: 11, color: 'var(--text-muted)', padding: '6px 8px', background: 'var(--surface2)', borderRadius: 8 }}>
+      当前强度: {label}
     </div>
   )
 }
@@ -153,20 +186,47 @@ function DimsTab({ scores }: { scores: Record<string, number> }) {
   )
 }
 
-function StackTab({ stack }: { stack: Array<{ card: { id: string; title: string; intensity: string }; score: number; reasoning: string }> }) {
-  if (stack.length === 0) return <div style={{ color: 'var(--text-dim)', fontSize: 12 }}>推荐栈为空</div>
+function StackTab({ stack, swipeHistory }: {
+  stack: Array<{ card: { id: string; title: string; intensity: string }; score: number; reasoning: string }>
+  swipeHistory: Array<{ cardId: string; direction: 'left' | 'right'; card: { atoms: { domain: string[] } } }>
+}) {
+  const cardMap = new Map(CARDS.map(c => [c.id, c]))
+  const recent = swipeHistory.slice(-5).reverse()
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-      {stack.slice(0, 8).map((sc, i) => (
-        <div key={sc.card.id} style={{ background: 'var(--surface2)', borderRadius: 8, padding: '7px 10px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 2 }}>
-            <span style={{ fontSize: 12, color: 'var(--text)', fontWeight: 500 }}>#{i + 1} {sc.card.title}</span>
-            <span style={{ fontSize: 11, color: 'var(--accent)' }}>{sc.score.toFixed(0)}分</span>
+      {stack.length === 0
+        ? <div style={{ color: 'var(--text-dim)', fontSize: 12 }}>推荐栈为空</div>
+        : stack.slice(0, 8).map((sc, i) => (
+          <div key={sc.card.id} style={{ background: 'var(--surface2)', borderRadius: 8, padding: '7px 10px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 2 }}>
+              <span style={{ fontSize: 12, color: 'var(--text)', fontWeight: 500 }}>#{i + 1} {sc.card.title}</span>
+              <span style={{ fontSize: 11, color: 'var(--accent)' }}>{sc.score.toFixed(0)}分</span>
+            </div>
+            <div style={{ fontSize: 10, color: 'var(--text-dim)' }}>{sc.reasoning}</div>
           </div>
-          <div style={{ fontSize: 10, color: 'var(--text-dim)' }}>{sc.reasoning}</div>
+        ))
+      }
+      {recent.length > 0 && (
+        <div style={{ marginTop: 4 }}>
+          <div style={{ fontSize: 10, color: 'var(--text-dim)', marginBottom: 4 }}>最近 {recent.length} 次滑动</div>
+          {recent.map((s, i) => {
+            const card = cardMap.get(s.cardId)
+            const domain = s.card.atoms.domain[0] ?? ''
+            return (
+              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 3 }}>
+                <span style={{ fontSize: 12, color: s.direction === 'right' ? 'var(--green)' : 'var(--red)' }}>
+                  {s.direction === 'right' ? '→' : '←'}
+                </span>
+                <span style={{ fontSize: 11, color: 'var(--text)', flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                  {card?.title ?? s.cardId}
+                </span>
+                <span style={{ fontSize: 10, color: 'var(--text-dim)', flexShrink: 0 }}>{DOMAIN_LABELS[domain] ?? domain}</span>
+              </div>
+            )
+          })}
         </div>
-      ))}
+      )}
     </div>
   )
 }
@@ -181,6 +241,8 @@ const styles: Record<string, React.CSSProperties> = {
     flexDirection: 'column',
     alignItems: 'flex-end',
     gap: 8,
+    cursor: 'grab',
+    touchAction: 'none',
   },
   toggle: {
     display: 'flex',
@@ -189,7 +251,7 @@ const styles: Record<string, React.CSSProperties> = {
     border: '1px solid var(--border)',
     borderRadius: 20,
     padding: '6px 12px',
-    cursor: 'pointer',
+    cursor: 'grab',
     backdropFilter: 'blur(12px)',
   },
   panel: {
@@ -206,6 +268,8 @@ const styles: Record<string, React.CSSProperties> = {
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 10,
+    cursor: 'grab',
+    userSelect: 'none',
   },
   statsRow: {
     display: 'grid',
