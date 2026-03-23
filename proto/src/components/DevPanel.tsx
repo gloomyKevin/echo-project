@@ -16,7 +16,7 @@ export default function DevPanel() {
   const [open, setOpen] = useState(false)
   const [tab, setTab] = useState<'cluster' | 'dims' | 'stack'>('cluster')
 
-  const { stack, dimensionScores, swipeHistory, checkins, reset } = useStore()
+  const { stack, dimensionScores, swipeHistory, checkins, likedIds, reset } = useStore()
   const profile = useClusterProfile()
 
   return (
@@ -51,6 +51,7 @@ export default function DevPanel() {
               <Stat label="滑动" value={swipeHistory.length} />
               <Stat label="右滑" value={swipeHistory.filter(s => s.direction === 'right').length} />
               <Stat label="打卡" value={checkins.length} />
+              <Stat label="已存" value={likedIds.size} />
               <Stat label="卡片池" value={stack.length} />
             </div>
 
@@ -208,7 +209,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   statsRow: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(4, 1fr)',
+    gridTemplateColumns: 'repeat(5, 1fr)',
     background: 'var(--surface2)',
     borderRadius: 10,
     padding: '10px 0',

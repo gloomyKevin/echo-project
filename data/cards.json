@@ -1,0 +1,534 @@
+[
+  {
+    "id": "c001", "scaleType": "micro", "intensity": "low",
+    "title": "今晚上床不带手机",
+    "tagline": "把手机放在够不到的地方，然后躺下来。",
+    "coverColor": "linear-gradient(135deg,#667eea,#764ba2)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective"], "triggerMood": ["tired","anxious"] },
+    "requirements": { "minMinutes": 0, "maxMinutes": 0, "budgetMin": 0, "budgetMax": 0, "locationRequired": "home" },
+    "preview": { "processSummary": "头十分钟手有点空。第二天醒来，第一件事是自己的意识，不是通知。", "dimensionImpact": { "health": { "min": 5, "max": 12 } } }
+  },
+  {
+    "id": "c002", "scaleType": "micro", "intensity": "low",
+    "title": "关灯躺着什么都不做十分钟",
+    "tagline": "不刷手机，就让脑子随便跑。",
+    "coverColor": "linear-gradient(135deg,#2c3e50,#4ca1af)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective"], "triggerMood": ["tired","anxious"] },
+    "requirements": { "minMinutes": 10, "maxMinutes": 10, "budgetMin": 0, "budgetMax": 0, "locationRequired": "home" },
+    "preview": { "processSummary": "五分钟后脑子开始自己走动。大多数人因为手机，已经很久没给过它这个机会了。", "dimensionImpact": { "health": { "min": 4, "max": 9 } } }
+  },
+  {
+    "id": "c003", "scaleType": "micro", "intensity": "low",
+    "title": "给一个很久没联系的人发条消息",
+    "tagline": "不用说什么大事，就是「最近怎样」。",
+    "coverColor": "linear-gradient(135deg,#4facfe,#00f2fe)",
+    "atoms": { "context": { "solo": true, "social": true, "indoor": true, "outdoor": false }, "domain": ["social"], "triggerMood": ["lonely","happy"] },
+    "requirements": { "minMinutes": 2, "maxMinutes": 5, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "发出去的瞬间有点奇怪。但几乎所有人收到都很开心，因为他们也在想你。", "dimensionImpact": { "social": { "min": 6, "max": 15 } } }
+  },
+  {
+    "id": "c004", "scaleType": "micro", "intensity": "low",
+    "title": "今天主动夸一个人，说具体的",
+    "tagline": "「你上次那个决定做得对，我一直想说」之类的。",
+    "coverColor": "linear-gradient(135deg,#f093fb,#f5576c)",
+    "atoms": { "context": { "solo": false, "social": true, "indoor": true, "outdoor": true }, "domain": ["social"], "triggerMood": ["happy","curious"] },
+    "requirements": { "minMinutes": 1, "maxMinutes": 1, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "想好说什么比说出口难。但说出来后，对方的反应几乎每次都让你觉得值。", "dimensionImpact": { "social": { "min": 5, "max": 10 } } }
+  },
+  {
+    "id": "c005", "scaleType": "micro", "intensity": "low",
+    "title": "写下今天三件还不错的小事",
+    "tagline": "不用很大，咖啡味道好、座位靠窗都算。",
+    "coverColor": "linear-gradient(135deg,#43e97b,#38f9d7)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective"], "triggerMood": ["tired","anxious"] },
+    "requirements": { "minMinutes": 3, "maxMinutes": 5, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "刚开始会觉得刻意。做过几次后，你开始在白天就留意这些事。这才是它真正的作用。", "dimensionImpact": { "health": { "min": 5, "max": 10 } } }
+  },
+  {
+    "id": "c006", "scaleType": "micro", "intensity": "low",
+    "title": "重听一首高中时喜欢但已经不听的歌",
+    "tagline": "不用搜，是你现在脑子里想到的那首。",
+    "coverColor": "linear-gradient(135deg,#a18cd1,#fbc2eb)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective"], "triggerMood": ["bored","nostalgic"] },
+    "requirements": { "minMinutes": 5, "maxMinutes": 5, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "两种反应都是好的。它会带出一些你忘了但其实还在的东西。", "dimensionImpact": { "health": { "min": 3, "max": 8 } } }
+  },
+  {
+    "id": "c007", "scaleType": "micro", "intensity": "low",
+    "title": "给父母打一个超过十五分钟的电话",
+    "tagline": "不是汇报自己，只是问他们最近在做什么。",
+    "coverColor": "linear-gradient(135deg,#ffecd2,#fcb69f)",
+    "atoms": { "context": { "solo": false, "social": true, "indoor": true, "outdoor": false }, "domain": ["social"], "triggerMood": ["lonely","happy"] },
+    "requirements": { "minMinutes": 15, "maxMinutes": 30, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "问「你最近有没有做什么新的事」——这个问题会让他们认真想。你可能会听到一些从没问过的东西。", "dimensionImpact": { "social": { "min": 8, "max": 15 } } }
+  },
+  {
+    "id": "c008", "scaleType": "daily", "intensity": "low",
+    "title": "换一条路回家",
+    "tagline": "不走今天来时的路。",
+    "coverColor": "linear-gradient(135deg,#96fbc4,#f9f586)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": false, "outdoor": true }, "domain": ["exploration"], "triggerMood": ["bored","tired"] },
+    "requirements": { "minMinutes": 5, "maxMinutes": 15, "budgetMin": 0, "budgetMax": 0, "locationRequired": "nearby" },
+    "preview": { "processSummary": "你会路过一些从没注意过的东西。不一定有什么，但你会想「原来这里是这样」。", "dimensionImpact": { "environment": { "min": 4, "max": 8 }, "possibility": { "min": 2, "max": 5 } } }
+  },
+  {
+    "id": "c009", "scaleType": "daily", "intensity": "low",
+    "title": "去附近一条从没进去过的小路",
+    "tagline": "那个你路过很多次但每次都走过去了的地方。",
+    "coverColor": "linear-gradient(135deg,#e0c3fc,#8ec5fc)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": false, "outdoor": true }, "domain": ["exploration"], "triggerMood": ["bored","curious"] },
+    "requirements": { "minMinutes": 30, "maxMinutes": 60, "budgetMin": 0, "budgetMax": 0, "locationRequired": "nearby" },
+    "preview": { "processSummary": "大概率普通。偶尔会发现意外。无论如何，那条路从此在你的地图里不再是空白。", "dimensionImpact": { "environment": { "min": 6, "max": 12 } } }
+  },
+  {
+    "id": "c010", "scaleType": "daily", "intensity": "low",
+    "title": "去书店，不知道买什么就随便翻",
+    "tagline": "不带目的，就是翻，直到有一本想带走。",
+    "coverColor": "linear-gradient(135deg,#d4fc79,#96e6a1)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["creative"], "triggerMood": ["bored","curious"] },
+    "requirements": { "minMinutes": 60, "maxMinutes": 90, "budgetMin": 30, "budgetMax": 80, "locationRequired": "city" },
+    "preview": { "processSummary": "刚进去因为没有搜索框会有点茫然。翻了几本后，会进入一种奇怪的状态。那本想带走的，往往不是原本会选的。", "dimensionImpact": { "possibility": { "min": 5, "max": 10 } } }
+  },
+  {
+    "id": "c011", "scaleType": "daily", "intensity": "low",
+    "title": "找一家开了二十年以上的小店，和老板聊两句",
+    "tagline": "问问这家店是怎么来的。",
+    "coverColor": "linear-gradient(135deg,#f7971e,#ffd200)",
+    "atoms": { "context": { "solo": true, "social": true, "indoor": true, "outdoor": false }, "domain": ["social","exploration"], "triggerMood": ["curious","bored"] },
+    "requirements": { "minMinutes": 15, "maxMinutes": 30, "budgetMin": 0, "budgetMax": 30, "locationRequired": "nearby" },
+    "preview": { "processSummary": "老板通常有话说，只是很少被问。之后的对话很难预测，但你会对这个城市多知道一点什么。", "dimensionImpact": { "social": { "min": 4, "max": 8 }, "environment": { "min": 3, "max": 6 } } }
+  },
+  {
+    "id": "c012", "scaleType": "daily", "intensity": "low",
+    "title": "去附近菜市场逛一圈",
+    "tagline": "不用买什么，就是逛。",
+    "coverColor": "linear-gradient(135deg,#f9a8d4,#fbbf24)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": false, "outdoor": true }, "domain": ["exploration","food"], "triggerMood": ["bored","curious"] },
+    "requirements": { "minMinutes": 45, "maxMinutes": 60, "budgetMin": 0, "budgetMax": 50, "locationRequired": "nearby" },
+    "preview": { "processSummary": "人和食材之间没有包装隔着。逛完出来，对这个城市的日常会多了解一点点什么。", "dimensionImpact": { "environment": { "min": 5, "max": 10 } } }
+  },
+  {
+    "id": "c013", "scaleType": "daily", "intensity": "medium",
+    "title": "去一家从没去过的餐厅，不看菜单让推荐",
+    "tagline": "坐下来，告诉服务员「你们最拿手的给我来一份」。",
+    "coverColor": "linear-gradient(135deg,#fa709a,#fee140)",
+    "atoms": { "context": { "solo": true, "social": true, "indoor": true, "outdoor": false }, "domain": ["food","exploration"], "triggerMood": ["bored","curious"] },
+    "requirements": { "minMinutes": 90, "maxMinutes": 120, "budgetMin": 40, "budgetMax": 120, "locationRequired": "city" },
+    "preview": { "processSummary": "把决定权交出去是奇怪的事。更有意思的是，不盯菜单的时候，你才真的在这里。", "dimensionImpact": { "possibility": { "min": 5, "max": 10 }, "health": { "min": 2, "max": 5 } } }
+  },
+  {
+    "id": "c014", "scaleType": "daily", "intensity": "medium",
+    "title": "一个人去看一场你平时不会选的电影",
+    "tagline": "选一个你绕着走的类型——纪录片、文艺片、老电影。",
+    "coverColor": "linear-gradient(135deg,#30cfd0,#330867)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["creative","reflective"], "triggerMood": ["bored","curious"] },
+    "requirements": { "minMinutes": 120, "maxMinutes": 180, "budgetMin": 40, "budgetMax": 80, "locationRequired": "city" },
+    "preview": { "processSummary": "没有人等你反应，你可以完全进去。要撑过开头——通常会有一刻，你突然理解了。", "dimensionImpact": { "possibility": { "min": 6, "max": 12 } } }
+  },
+  {
+    "id": "c015", "scaleType": "daily", "intensity": "medium",
+    "title": "骑车或步行去平时打车才去的地方",
+    "tagline": "同一个地方，用慢的方式。",
+    "coverColor": "linear-gradient(135deg,#56ab2f,#a8e063)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": false, "outdoor": true }, "domain": ["physical","exploration"], "triggerMood": ["bored","curious"] },
+    "requirements": { "minMinutes": 60, "maxMinutes": 120, "budgetMin": 0, "budgetMax": 0, "locationRequired": "city" },
+    "preview": { "processSummary": "原来觉得很远，用腿量过之后就不远了。那种累是好的——自己真实地移动过城市的感觉。", "dimensionImpact": { "health": { "min": 8, "max": 15 }, "environment": { "min": 5, "max": 10 } } }
+  },
+  {
+    "id": "c016", "scaleType": "daily", "intensity": "medium",
+    "title": "约一个只见过几面的人吃顿饭",
+    "tagline": "那个你们有过一次很好的对话、但之后再没深入的人。",
+    "coverColor": "linear-gradient(135deg,#ee9ca7,#ffdde1)",
+    "atoms": { "context": { "solo": false, "social": true, "indoor": true, "outdoor": false }, "domain": ["social"], "triggerMood": ["curious","lonely"] },
+    "requirements": { "minMinutes": 90, "maxMinutes": 120, "budgetMin": 50, "budgetMax": 120, "locationRequired": "city" },
+    "preview": { "processSummary": "发消息前会犹豫。但大多数人都会说好，因为他们也想过但没发出来。", "dimensionImpact": { "social": { "min": 10, "max": 18 } } }
+  },
+  {
+    "id": "c017", "scaleType": "event", "intensity": "medium",
+    "title": "在城市里随机选一个方向，坐地铁到终点",
+    "tagline": "从你所在的站，坐到这条线的最后一站。",
+    "coverColor": "linear-gradient(135deg,#4776e6,#8e54e9)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": false, "outdoor": true }, "domain": ["exploration"], "triggerMood": ["bored","curious","want_change"] },
+    "requirements": { "minMinutes": 240, "maxMinutes": 360, "budgetMin": 10, "budgetMax": 30, "locationRequired": "city" },
+    "preview": { "processSummary": "出了地铁，没有任何计划，只有你和那个地方。这种没有目的地的出发感，比任何精心安排的行程都让人记得住。", "dimensionImpact": { "environment": { "min": 10, "max": 20 }, "possibility": { "min": 8, "max": 15 } } }
+  },
+  {
+    "id": "c018", "scaleType": "event", "intensity": "medium",
+    "title": "写一封信给五年后的自己",
+    "tagline": "认真想，认真写，不是十分钟就能完成的那种。",
+    "coverColor": "linear-gradient(135deg,#c471ed,#f64f59)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective"], "triggerMood": ["want_change","curious"] },
+    "requirements": { "minMinutes": 120, "maxMinutes": 240, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "写了几行后停不下来，因为脑子里有很多没被整理过的东西。写完以后，很多事情比之前清晰——不是答案，是方向。", "dimensionImpact": { "possibility": { "min": 8, "max": 15 }, "health": { "min": 5, "max": 10 } } }
+  },
+  {
+    "id": "c019", "scaleType": "event", "intensity": "high",
+    "title": "报名一个完全陌生领域的线下课",
+    "tagline": "陶艺、拳击、插花、攀岩——从没碰过的那种。",
+    "coverColor": "linear-gradient(135deg,#f77062,#fe5196)",
+    "atoms": { "context": { "solo": true, "social": true, "indoor": true, "outdoor": false }, "domain": ["creative","exploration"], "triggerMood": ["curious","want_change"] },
+    "requirements": { "minMinutes": 180, "maxMinutes": 240, "budgetMin": 80, "budgetMax": 300, "locationRequired": "city" },
+    "preview": { "processSummary": "你会回到完全是新手的状态，这种感觉很久没有了。结束之后大概率觉得「还挺有意思」。", "dimensionImpact": { "possibility": { "min": 12, "max": 20 }, "social": { "min": 4, "max": 8 } } }
+  },
+  {
+    "id": "c020", "scaleType": "event", "intensity": "high",
+    "title": "今天完成一件你一直在回避的事——就第一步",
+    "tagline": "不用完成，今天只做第一步。",
+    "coverColor": "linear-gradient(135deg,#1a1a2e,#16213e)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective"], "triggerMood": ["anxious","want_change"] },
+    "requirements": { "minMinutes": 0, "maxMinutes": 0, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "第一步做完，它就从「一直没做」变成了「已经开始了」。这两个状态的重量完全不同。", "dimensionImpact": { "possibility": { "min": 10, "max": 18 }, "career": { "min": 5, "max": 10 } } }
+  },
+  {
+    "id": "c021", "scaleType": "micro", "intensity": "low",
+    "title": "随机找一张你不熟悉的专辑，听完整张",
+    "tagline": "不快进，不换歌。",
+    "coverColor": "linear-gradient(135deg,#6a3093,#a044ff)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["creative"], "triggerMood": ["bored","tired"] },
+    "requirements": { "minMinutes": 40, "maxMinutes": 60, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "头几首可能没感觉。但听完整张，你会对这个人有种完整但说不清楚的印象。和刷歌单完全不同。", "dimensionImpact": { "possibility": { "min": 4, "max": 9 } } }
+  },
+  {
+    "id": "c022", "scaleType": "micro", "intensity": "low",
+    "title": "吃饭时不刷手机，只是吃",
+    "tagline": "把手机扣过去，或者干脆不带出来。",
+    "coverColor": "linear-gradient(135deg,#f8b500,#f05f57)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective"], "triggerMood": ["tired","anxious"] },
+    "requirements": { "minMinutes": 15, "maxMinutes": 30, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "前几分钟手会想拿它。后来开始真的注意到食物的味道——和这家店在放什么歌。", "dimensionImpact": { "health": { "min": 3, "max": 8 } } }
+  },
+  {
+    "id": "c023", "scaleType": "micro", "intensity": "low",
+    "title": "手写一张明信片寄给一个人",
+    "tagline": "选一个你知道收到会开心的人。不用说大事，一件小的就够。",
+    "coverColor": "linear-gradient(135deg,#fccb90,#d57eeb)",
+    "atoms": { "context": { "solo": true, "social": true, "indoor": true, "outdoor": false }, "domain": ["social","creative"], "triggerMood": ["happy","lonely"] },
+    "requirements": { "minMinutes": 15, "maxMinutes": 20, "budgetMin": 5, "budgetMax": 15, "locationRequired": "home" },
+    "preview": { "processSummary": "写的过程让你对这个人多想了几分钟。那张明信片在手里的重量，是微信消息没有的。", "dimensionImpact": { "social": { "min": 6, "max": 12 } } }
+  },
+  {
+    "id": "c024", "scaleType": "micro", "intensity": "low",
+    "title": "回想今天和某人的一次对话，试着想想他当时在想什么",
+    "tagline": "不是分析对方，是真的站到他那边想一想。",
+    "coverColor": "linear-gradient(135deg,#5f72bd,#9b23ea)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective","social"], "triggerMood": ["anxious","tired"] },
+    "requirements": { "minMinutes": 5, "maxMinutes": 10, "budgetMin": 0, "budgetMax": 0, "locationRequired": "home" },
+    "preview": { "processSummary": "我们太习惯待在自己的视角里了。想完之后，那个人会变得更立体一些。", "dimensionImpact": { "social": { "min": 4, "max": 8 }, "health": { "min": 2, "max": 5 } } }
+  },
+  {
+    "id": "c025", "scaleType": "micro", "intensity": "medium",
+    "title": "联系一个你想感谢但一直没说的人",
+    "tagline": "具体说是什么事，不用隆重，一段话就够。",
+    "coverColor": "linear-gradient(135deg,#f953c6,#b91d73)",
+    "atoms": { "context": { "solo": true, "social": true, "indoor": true, "outdoor": false }, "domain": ["social"], "triggerMood": ["happy","anxious"] },
+    "requirements": { "minMinutes": 5, "maxMinutes": 10, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "感谢永远不嫌晚。你说完后会有一种轻的感觉，像是还了一个欠了很久的心债。", "dimensionImpact": { "social": { "min": 8, "max": 14 }, "health": { "min": 4, "max": 8 } } }
+  },
+  {
+    "id": "c026", "scaleType": "event", "intensity": "high",
+    "title": "和一个朋友互写「你觉得我还可以在哪里更好」，然后交换",
+    "tagline": "不是批评，是真实的反馈。找一个你真正信任的人。",
+    "coverColor": "linear-gradient(135deg,#1f4037,#99f2c8)",
+    "atoms": { "context": { "solo": false, "social": true, "indoor": true, "outdoor": false }, "domain": ["reflective","social"], "triggerMood": ["want_change","curious"] },
+    "requirements": { "minMinutes": 30, "maxMinutes": 60, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "收到反馈时，第一反应可能是想辩解。先按住。让你想辩解的地方，往往是最值得想的。", "dimensionImpact": { "social": { "min": 8, "max": 15 }, "possibility": { "min": 6, "max": 12 } } }
+  },
+  {
+    "id": "c027", "scaleType": "micro", "intensity": "low",
+    "title": "和住在附近但基本不说话的邻居打个招呼",
+    "tagline": "不用聊，就是让对方知道你知道他存在。",
+    "coverColor": "linear-gradient(135deg,#accbee,#e7f0fd)",
+    "atoms": { "context": { "solo": false, "social": true, "indoor": false, "outdoor": true }, "domain": ["social"], "triggerMood": ["bored","lonely"] },
+    "requirements": { "minMinutes": 1, "maxMinutes": 5, "budgetMin": 0, "budgetMax": 0, "locationRequired": "home" },
+    "preview": { "processSummary": "第一次会有点奇怪。但一栋楼里，知道彼此存在和不知道，住起来是不一样的。", "dimensionImpact": { "social": { "min": 3, "max": 7 }, "environment": { "min": 2, "max": 5 } } }
+  },
+  {
+    "id": "c028", "scaleType": "daily", "intensity": "medium",
+    "title": "今天下厨做一道从没做过的菜",
+    "tagline": "不要选「家常菜升级版」，选一道你不确定自己做不做得来的。",
+    "coverColor": "linear-gradient(135deg,#f83600,#f9d423)",
+    "atoms": { "context": { "solo": true, "social": true, "indoor": true, "outdoor": false }, "domain": ["creative","food"], "triggerMood": ["bored","curious"] },
+    "requirements": { "minMinutes": 60, "maxMinutes": 90, "budgetMin": 30, "budgetMax": 80, "locationRequired": "home" },
+    "preview": { "processSummary": "可能有一两个步骤出错，这很正常。做完不管好不好吃，都会有「原来是这么来的」的感觉。", "dimensionImpact": { "health": { "min": 4, "max": 8 }, "possibility": { "min": 3, "max": 7 } } }
+  },
+  {
+    "id": "c029", "scaleType": "daily", "intensity": "low",
+    "title": "把家里一个角落彻底整理，按你真正喜欢的样子摆",
+    "tagline": "不是收纳，是重新决定这个空间对你意味着什么。",
+    "coverColor": "linear-gradient(135deg,#e6ddd4,#b8a89a)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective","creative"], "triggerMood": ["anxious","bored"] },
+    "requirements": { "minMinutes": 60, "maxMinutes": 120, "budgetMin": 0, "budgetMax": 50, "locationRequired": "home" },
+    "preview": { "processSummary": "清掉一些之后，那个角落开始透气。做完后感觉不一样——不是因为变好看，是因为那里有了你的一个决定。", "dimensionImpact": { "environment": { "min": 8, "max": 14 } } }
+  },
+  {
+    "id": "c030", "scaleType": "micro", "intensity": "low",
+    "title": "今晚不开灯，只点蜡烛待一个小时",
+    "tagline": "就是这样，没有别的要求。",
+    "coverColor": "linear-gradient(135deg,#2d1b69,#f7971e)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective"], "triggerMood": ["tired","anxious"] },
+    "requirements": { "minMinutes": 60, "maxMinutes": 60, "budgetMin": 0, "budgetMax": 20, "locationRequired": "home" },
+    "preview": { "processSummary": "眼睛适应之后，房间的轮廓变得不一样。大脑会以不同的方式运转——只是因为光线不一样了。", "dimensionImpact": { "health": { "min": 5, "max": 10 } } }
+  },
+  {
+    "id": "c031", "scaleType": "micro", "intensity": "low",
+    "title": "用手机录一段只给自己听的语音，说说你现在在想什么",
+    "tagline": "不用整理成观点，就是说出来。说完可以删。",
+    "coverColor": "linear-gradient(135deg,#373b44,#4286f4)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective"], "triggerMood": ["anxious","tired"] },
+    "requirements": { "minMinutes": 3, "maxMinutes": 5, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "说出来和想清楚不一样——嘴说的时候会暴露脑子里没想完的地方。留下的是「说出来了」的感觉。", "dimensionImpact": { "health": { "min": 4, "max": 8 } } }
+  },
+  {
+    "id": "c032", "scaleType": "micro", "intensity": "low",
+    "title": "今天买一样你每次路过都扫一眼但从没买过的东西",
+    "tagline": "超市架子上的怪口味，书摊上的杂志，小摊上的小玩意儿。",
+    "coverColor": "linear-gradient(135deg,#11998e,#38ef7d)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": false, "outdoor": true }, "domain": ["exploration"], "triggerMood": ["curious","bored"] },
+    "requirements": { "minMinutes": 5, "maxMinutes": 10, "budgetMin": 5, "budgetMax": 30, "locationRequired": "nearby" },
+    "preview": { "processSummary": "很可能买完觉得就那样。但你打破了一个「每次都没买」的小惯性，这比东西本身值钱。", "dimensionImpact": { "possibility": { "min": 3, "max": 7 } } }
+  },
+  {
+    "id": "c033", "scaleType": "daily", "intensity": "low",
+    "title": "比平时早起一小时，在安静里把这一小时用掉",
+    "tagline": "不规定做什么，但不能刷手机。",
+    "coverColor": "linear-gradient(135deg,#f8cdda,#1d2b64)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective"], "triggerMood": ["want_change","anxious"] },
+    "requirements": { "minMinutes": 60, "maxMinutes": 60, "budgetMin": 0, "budgetMax": 0, "locationRequired": "home" },
+    "preview": { "processSummary": "刚醒来那一小时大脑最安静，还没接收任何输入。不需要每天，偶尔一次就有感觉。", "dimensionImpact": { "health": { "min": 5, "max": 10 } } }
+  },
+  {
+    "id": "c034", "scaleType": "micro", "intensity": "low",
+    "title": "今天早晨在家认真做早饭，坐下来慢慢吃完",
+    "tagline": "不是外卖，不是边走边吃，就是坐下来吃完。",
+    "coverColor": "linear-gradient(135deg,#fddb92,#d1fdff)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective","food"], "triggerMood": ["tired","want_change"] },
+    "requirements": { "minMinutes": 20, "maxMinutes": 30, "budgetMin": 10, "budgetMax": 30, "locationRequired": "home" },
+    "preview": { "processSummary": "做的过程比吃的过程更重要。为自己做一件小事的感觉和凑合吃是不一样的。", "dimensionImpact": { "health": { "min": 4, "max": 9 } } }
+  },
+  {
+    "id": "c035", "scaleType": "daily", "intensity": "low",
+    "title": "雨天找一家咖啡馆，带本书坐够两小时",
+    "tagline": "不是为了打卡，就是坐在那里。",
+    "coverColor": "linear-gradient(135deg,#4b6cb7,#182848)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective","creative"], "triggerMood": ["bored","tired"] },
+    "requirements": { "minMinutes": 120, "maxMinutes": 120, "budgetMin": 25, "budgetMax": 50, "locationRequired": "city" },
+    "preview": { "processSummary": "雨天的咖啡馆有一种平时没有的边界感。书看不看完都无所谓，带着去是为了有个停留的理由。", "dimensionImpact": { "health": { "min": 4, "max": 8 }, "possibility": { "min": 2, "max": 5 } } }
+  },
+  {
+    "id": "c036", "scaleType": "micro", "intensity": "medium",
+    "title": "下雨天出门在雨里走一段，不打伞",
+    "tagline": "就淋一会儿，不要跑。",
+    "coverColor": "linear-gradient(135deg,#3a7bd5,#3a6073)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": false, "outdoor": true }, "domain": ["physical","exploration"], "triggerMood": ["bored","want_change"] },
+    "requirements": { "minMinutes": 10, "maxMinutes": 20, "budgetMin": 0, "budgetMax": 0, "locationRequired": "nearby" },
+    "preview": { "processSummary": "淋雨的感觉很具体——衣服的重量、地面的反光、城市变得不一样的声音。回来后会有说不清的轻盈。", "dimensionImpact": { "health": { "min": 4, "max": 8 }, "possibility": { "min": 3, "max": 6 } } }
+  },
+  {
+    "id": "c037", "scaleType": "event", "intensity": "high",
+    "title": "做一件你认识的人里没有人做过的事",
+    "tagline": "不用多大，就是在你的圈子里是第一个的那种。",
+    "coverColor": "linear-gradient(135deg,#0f0c29,#302b63,#24243e)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": false, "outdoor": true }, "domain": ["exploration"], "triggerMood": ["curious","want_change"] },
+    "requirements": { "minMinutes": 0, "maxMinutes": 0, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "你大概已经知道是哪件事了。「没有人可以参考」本身就是它的一部分。", "dimensionImpact": { "possibility": { "min": 15, "max": 25 } } }
+  },
+  {
+    "id": "c038", "scaleType": "event", "intensity": "medium",
+    "title": "去爬城市附近的山，全程不戴耳机",
+    "tagline": "就你一个人和那座山。",
+    "coverColor": "linear-gradient(135deg,#134e5e,#71b280)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": false, "outdoor": true }, "domain": ["physical","reflective"], "triggerMood": ["tired","anxious","want_change"] },
+    "requirements": { "minMinutes": 300, "maxMinutes": 480, "budgetMin": 0, "budgetMax": 60, "locationRequired": "city" },
+    "preview": { "processSummary": "不戴耳机是这张卡的关键。习惯了之后，你开始想一些东西——平静地想，不是焦虑的那种。", "dimensionImpact": { "health": { "min": 10, "max": 18 }, "environment": { "min": 8, "max": 12 } } }
+  },
+  {
+    "id": "c039", "scaleType": "daily", "intensity": "medium",
+    "title": "一整天不用社交媒体",
+    "tagline": "微信联系人还可以，朋友圈/小红书/微博/抖音全部不开。",
+    "coverColor": "linear-gradient(135deg,#232526,#414345)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective"], "triggerMood": ["anxious","tired","want_change"] },
+    "requirements": { "minMinutes": 0, "maxMinutes": 0, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "下午开始冲动会变少。晚上你会发现多做了几件事——因为没了「顺手刷一下」的出口。", "dimensionImpact": { "health": { "min": 8, "max": 15 } } }
+  },
+  {
+    "id": "c040", "scaleType": "daily", "intensity": "low",
+    "title": "找到离你最近的从没去过的公园，在那里坐够三十分钟",
+    "tagline": "不用做什么，就是坐着。",
+    "coverColor": "linear-gradient(135deg,#93f9b9,#1d976c)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": false, "outdoor": true }, "domain": ["reflective","exploration"], "triggerMood": ["tired","anxious","bored"] },
+    "requirements": { "minMinutes": 60, "maxMinutes": 90, "budgetMin": 0, "budgetMax": 0, "locationRequired": "nearby" },
+    "preview": { "processSummary": "坐够三十分钟比你预期的容易，户外的感知节奏和室内不一样。离开时，那个地方变成了你地图里的一个点。", "dimensionImpact": { "health": { "min": 5, "max": 10 }, "environment": { "min": 6, "max": 12 } } }
+  },
+  {
+    "id": "c041", "scaleType": "micro", "intensity": "low",
+    "title": "今晚睡前，把明天最想做的一件事写在纸上放在桌上",
+    "tagline": "不是任务清单，只写一件。",
+    "coverColor": "linear-gradient(135deg,#e8d5b7,#a0856c)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective"], "triggerMood": ["anxious","tired"] },
+    "requirements": { "minMinutes": 2, "maxMinutes": 3, "budgetMin": 0, "budgetMax": 0, "locationRequired": "home" },
+    "preview": { "processSummary": "只写一件事这件事本身就是个决定。早上起来看到它，比手机上的任何提醒都有分量。", "dimensionImpact": { "health": { "min": 3, "max": 7 }, "career": { "min": 3, "max": 6 } } }
+  },
+  {
+    "id": "c042", "scaleType": "daily", "intensity": "low",
+    "title": "今天走进一家从没进去过的展览或画廊",
+    "tagline": "不用看懂，就是进去走一遍。",
+    "coverColor": "linear-gradient(135deg,#f5f7fa,#c3cfe2)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["creative","exploration"], "triggerMood": ["curious","bored"] },
+    "requirements": { "minMinutes": 45, "maxMinutes": 90, "budgetMin": 0, "budgetMax": 40, "locationRequired": "city" },
+    "preview": { "processSummary": "不懂没关系，站在你有感觉的那件作品前面多待一会儿就够。不用解释为什么。", "dimensionImpact": { "possibility": { "min": 4, "max": 9 }, "environment": { "min": 3, "max": 6 } } }
+  },
+  {
+    "id": "c043", "scaleType": "daily", "intensity": "low",
+    "title": "带着手机出门，只拍一张真正满意的照片",
+    "tagline": "不是随手一拍，是找到了才按快门的那种。",
+    "coverColor": "linear-gradient(135deg,#bdc3c7,#2c3e50)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": false, "outdoor": true }, "domain": ["creative","exploration"], "triggerMood": ["bored","curious"] },
+    "requirements": { "minMinutes": 30, "maxMinutes": 60, "budgetMin": 0, "budgetMax": 0, "locationRequired": "nearby" },
+    "preview": { "processSummary": "找一张真正满意的照片比你预期的难，因为你开始真正注意周围了。找到的时候，那一下会很确定。", "dimensionImpact": { "environment": { "min": 4, "max": 8 }, "possibility": { "min": 3, "max": 6 } } }
+  },
+  {
+    "id": "c044", "scaleType": "micro", "intensity": "low",
+    "title": "今天对一个服务人员说谢谢，然后看一眼他的表情",
+    "tagline": "收银员、外卖员、保安——任何一个。",
+    "coverColor": "linear-gradient(135deg,#ffd89b,#19547b)",
+    "atoms": { "context": { "solo": false, "social": true, "indoor": false, "outdoor": true }, "domain": ["social"], "triggerMood": ["bored","happy"] },
+    "requirements": { "minMinutes": 1, "maxMinutes": 1, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "大多数人习惯把这类互动当成交易完成。看一眼对方的表情，这一天会有一刻不一样的密度。", "dimensionImpact": { "social": { "min": 3, "max": 6 } } }
+  },
+  {
+    "id": "c045", "scaleType": "event", "intensity": "medium",
+    "title": "去一座你没去过的城市，不订酒店直接出发，当天返回",
+    "tagline": "高铁/飞机两小时内能到的地方就够。",
+    "coverColor": "linear-gradient(135deg,#f7797d,#fbd786,#c6ffdd)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": false, "outdoor": true }, "domain": ["exploration"], "triggerMood": ["bored","want_change","curious"] },
+    "requirements": { "minMinutes": 480, "maxMinutes": 720, "budgetMin": 100, "budgetMax": 400, "locationRequired": "city" },
+    "preview": { "processSummary": "在一个陌生城市只有半天，没有时间「做攻略」。你会很快发现自己真正想干什么——因为没有别的选项。", "dimensionImpact": { "environment": { "min": 12, "max": 22 }, "possibility": { "min": 10, "max": 18 } } }
+  },
+
+  {
+    "id": "c046", "scaleType": "event", "intensity": "medium",
+    "title": "花一小时给自己写一份「职业资产清单」",
+    "tagline": "你会什么、做过什么、别人认为你擅长什么——全写下来，不用整理成简历格式。",
+    "coverColor": "linear-gradient(135deg,#1e3c72,#2a5298)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective"], "triggerMood": ["want_change","anxious","curious"] },
+    "requirements": { "minMinutes": 60, "maxMinutes": 90, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "写的时候会发现很多你已经拥有但从没认真盘点过的东西。有些你以为很普通的能力，换一个视角其实相当稀缺。", "dimensionImpact": { "career": { "min": 8, "max": 15 }, "possibility": { "min": 5, "max": 10 } } }
+  },
+  {
+    "id": "c047", "scaleType": "event", "intensity": "medium",
+    "title": "约一个你尊重的前辈，问他们「你最后悔没早点做的一件事是什么」",
+    "tagline": "就这一个问题，然后认真听。",
+    "coverColor": "linear-gradient(135deg,#373b44,#4286f4)",
+    "atoms": { "context": { "solo": false, "social": true, "indoor": true, "outdoor": false }, "domain": ["social"], "triggerMood": ["curious","want_change"] },
+    "requirements": { "minMinutes": 60, "maxMinutes": 90, "budgetMin": 0, "budgetMax": 80, "locationRequired": "city" },
+    "preview": { "processSummary": "这个问题让大多数人真的想一想。你会听到一些不在任何书里的答案——是那个人用时间换来的，他们很少被认真问。", "dimensionImpact": { "social": { "min": 6, "max": 12 }, "career": { "min": 5, "max": 10 }, "possibility": { "min": 6, "max": 12 } } }
+  },
+  {
+    "id": "c048", "scaleType": "micro", "intensity": "low",
+    "title": "今天在工作或学习中，主动做一件比要求多一点点的事",
+    "tagline": "不是加班，是在已有的事情里多往前走半步。",
+    "coverColor": "linear-gradient(135deg,#2c3e50,#3498db)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective"], "triggerMood": ["bored","tired"] },
+    "requirements": { "minMinutes": 0, "maxMinutes": 0, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "不会有人注意到，这正是重点。那半步是给自己的，不是给评价的。做完以后和只做完要求的感觉是不一样的。", "dimensionImpact": { "career": { "min": 4, "max": 8 } } }
+  },
+  {
+    "id": "c049", "scaleType": "daily", "intensity": "medium",
+    "title": "今天花30分钟认真学一个你一直说「以后再学」的具体技能",
+    "tagline": "Excel快捷键、某个软件功能、某种烹饪技法——越具体越好。",
+    "coverColor": "linear-gradient(135deg,#0f2027,#203a43,#2c5364)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["creative","reflective"], "triggerMood": ["bored","want_change","curious"] },
+    "requirements": { "minMinutes": 30, "maxMinutes": 30, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "「以后」这个词是个黑洞。30分钟说短不短，大多数具体小技能就是这样被掌握的。学完之后那个「以后再说」就消失了。", "dimensionImpact": { "career": { "min": 6, "max": 12 }, "possibility": { "min": 4, "max": 8 } } }
+  },
+  {
+    "id": "c050", "scaleType": "micro", "intensity": "low",
+    "title": "今天把这个月的花费大致列出来，不评判，只是看看",
+    "tagline": "不是要你记账，就是看一眼钱都去哪了。",
+    "coverColor": "linear-gradient(135deg,#3d4e81,#5753c9,#6e7ff3)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective"], "triggerMood": ["anxious","tired"] },
+    "requirements": { "minMinutes": 10, "maxMinutes": 15, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "大多数人不清楚自己实际的花费分布。看见了不一定要改变什么，但清楚和模糊的感觉完全不一样。", "dimensionImpact": { "finance": { "min": 5, "max": 10 } } }
+  },
+  {
+    "id": "c051", "scaleType": "daily", "intensity": "low",
+    "title": "找出五件你拥有但超过一年没碰过的东西，认真决定去留",
+    "tagline": "不是要你大扫除，就是五件，认真的。",
+    "coverColor": "linear-gradient(135deg,#c9d6df,#52616b)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["reflective"], "triggerMood": ["anxious","want_change","bored"] },
+    "requirements": { "minMinutes": 30, "maxMinutes": 60, "budgetMin": 0, "budgetMax": 0, "locationRequired": "home" },
+    "preview": { "processSummary": "每一件东西都是一个没做完的决定。处理掉五件，不是在扔东西，是在收回五个悬而未决的选择。", "dimensionImpact": { "finance": { "min": 4, "max": 8 }, "environment": { "min": 5, "max": 10 } } }
+  },
+  {
+    "id": "c052", "scaleType": "micro", "intensity": "low",
+    "title": "今天买某件东西前先停三秒，问自己「我会用多少次」",
+    "tagline": "不是要你不买，只是先问一下。",
+    "coverColor": "linear-gradient(135deg,#667db6,#0082c8,#0082c8,#667db6)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": true }, "domain": ["reflective"], "triggerMood": ["curious","bored"] },
+    "requirements": { "minMinutes": 0, "maxMinutes": 0, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "三秒不会让你变成一个抠门的人，但会让你的一些花费变得更清醒。有时候答案是「买」，有时候是「其实不用」。两个都好。", "dimensionImpact": { "finance": { "min": 3, "max": 6 } } }
+  },
+  {
+    "id": "c053", "scaleType": "daily", "intensity": "medium",
+    "title": "去一家从没去过的运动场馆或健身房，只体验一次",
+    "tagline": "游泳池、攀岩馆、羽毛球馆、击剑——随便一种你没试过的。",
+    "coverColor": "linear-gradient(135deg,#f12711,#f5af19)",
+    "atoms": { "context": { "solo": true, "social": true, "indoor": true, "outdoor": false }, "domain": ["physical","exploration"], "triggerMood": ["want_change","bored","curious"] },
+    "requirements": { "minMinutes": 90, "maxMinutes": 120, "budgetMin": 30, "budgetMax": 80, "locationRequired": "city" },
+    "preview": { "processSummary": "第一次进一个新的运动空间，有点陌生，有点好奇。不用考虑「以后要不要坚持」，这次就是一次体验。", "dimensionImpact": { "health": { "min": 6, "max": 12 }, "possibility": { "min": 4, "max": 8 } } }
+  },
+  {
+    "id": "c054", "scaleType": "micro", "intensity": "low",
+    "title": "今天出门时比平时多走两站路，不坐车",
+    "tagline": "就多走这两站，不是健身计划，就是今天这一次。",
+    "coverColor": "linear-gradient(135deg,#56ab2f,#a8e063)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": false, "outdoor": true }, "domain": ["physical","exploration"], "triggerMood": ["tired","bored"] },
+    "requirements": { "minMinutes": 15, "maxMinutes": 25, "budgetMin": 0, "budgetMax": 0, "locationRequired": "nearby" },
+    "preview": { "processSummary": "这段路你之前都是坐过去的。用走的量一遍，那段距离就从「模糊的远」变成了「具体的近」。", "dimensionImpact": { "health": { "min": 4, "max": 8 }, "environment": { "min": 2, "max": 5 } } }
+  },
+  {
+    "id": "c055", "scaleType": "micro", "intensity": "low",
+    "title": "今天早上起来先做十分钟拉伸，再碰手机",
+    "tagline": "十分钟，不用跟着教程，随便动就行。",
+    "coverColor": "linear-gradient(135deg,#fceabb,#f8b500)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["physical","reflective"], "triggerMood": ["tired","anxious"] },
+    "requirements": { "minMinutes": 10, "maxMinutes": 10, "budgetMin": 0, "budgetMax": 0, "locationRequired": "home" },
+    "preview": { "processSummary": "前三分钟你会觉得身体很僵。五分钟后开始有感觉。结束时，你和手机之间多了一段属于自己的时间——这会影响整个早晨的质量。", "dimensionImpact": { "health": { "min": 5, "max": 10 } } }
+  },
+  {
+    "id": "c056", "scaleType": "micro", "intensity": "low",
+    "title": "随便找张纸，画出你现在脑子里的状态，不追求好看",
+    "tagline": "不是画画，就是把脑子里那团东西放到纸上。",
+    "coverColor": "linear-gradient(135deg,#f093fb,#f5576c)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": false }, "domain": ["creative","reflective"], "triggerMood": ["anxious","tired"] },
+    "requirements": { "minMinutes": 5, "maxMinutes": 10, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "画完之后你会发现那些东西有了形状。没有形状的时候它们一直在流动，有了形状，你才能看清楚是什么。", "dimensionImpact": { "health": { "min": 3, "max": 7 }, "possibility": { "min": 2, "max": 5 } } }
+  },
+  {
+    "id": "c057", "scaleType": "daily", "intensity": "low",
+    "title": "去花市买一把散花，回家自己随意插进瓶子里",
+    "tagline": "不用有花艺基础，就是随意放进去。",
+    "coverColor": "linear-gradient(135deg,#f9d423,#f83600)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": false, "outdoor": true }, "domain": ["creative","exploration"], "triggerMood": ["bored","curious"] },
+    "requirements": { "minMinutes": 45, "maxMinutes": 60, "budgetMin": 15, "budgetMax": 40, "locationRequired": "nearby" },
+    "preview": { "processSummary": "花市里的东西比你预期的便宜。插好之后那个角落会不一样——不是因为好看，是因为是你选的、你放的。", "dimensionImpact": { "environment": { "min": 6, "max": 10 }, "possibility": { "min": 3, "max": 6 } } }
+  },
+  {
+    "id": "c058", "scaleType": "daily", "intensity": "medium",
+    "title": "和一个认识超过五年的老朋友见面，只聊最近真实的状态",
+    "tagline": "不是喝酒聚会，就是两个人，说说最近真实的生活。",
+    "coverColor": "linear-gradient(135deg,#ee9ca7,#ffdde1)",
+    "atoms": { "context": { "solo": false, "social": true, "indoor": true, "outdoor": false }, "domain": ["social"], "triggerMood": ["lonely","want_change","anxious"] },
+    "requirements": { "minMinutes": 90, "maxMinutes": 150, "budgetMin": 30, "budgetMax": 80, "locationRequired": "city" },
+    "preview": { "processSummary": "老朋友之间的对话很少这样开门见山。但说「最近真实的状态」这件事，往往比任何话题都更让两个人靠近。", "dimensionImpact": { "social": { "min": 10, "max": 18 }, "health": { "min": 4, "max": 8 } } }
+  },
+  {
+    "id": "c059", "scaleType": "micro", "intensity": "low",
+    "title": "今天做一件事只为这件事本身，不拍照，不发朋友圈",
+    "tagline": "随便什么事——吃东西、散步、听音乐，但这次只是体验，不记录。",
+    "coverColor": "linear-gradient(135deg,#2c3e50,#4ca1af)",
+    "atoms": { "context": { "solo": true, "social": false, "indoor": true, "outdoor": true }, "domain": ["reflective"], "triggerMood": ["tired","anxious","want_change"] },
+    "requirements": { "minMinutes": 0, "maxMinutes": 0, "budgetMin": 0, "budgetMax": 0, "locationRequired": "anywhere" },
+    "preview": { "processSummary": "记录这件事本身没有问题。但偶尔彻底不记录，你会发现那段时间以一种不同的方式停留在你的记忆里。", "dimensionImpact": { "health": { "min": 4, "max": 8 }, "possibility": { "min": 3, "max": 6 } } }
+  }
+]
