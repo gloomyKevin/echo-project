@@ -1,0 +1,36 @@
+.app {
+  height: 100%;
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 星图入口 */
+.starmap-entry {
+  position: fixed;
+  top: 16px;
+  right: max(16px, calc((100vw - 430px) / 2 + 16px));
+  z-index: 100;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.starmap-entry .glow {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(91, 141, 239, 0.4) 0%, transparent 70%);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.3); }
+}

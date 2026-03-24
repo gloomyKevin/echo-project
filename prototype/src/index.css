@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --bg: #0F1419;
+  --bg-light: #1A2028;
+  --text: #E8E6E3;
+  --text-dim: #6B7280;
+  --text-muted: #3D4450;
+
+  --warm: #F59E42;
+  --blue: #5B8DEF;
+  --green: #4ADE80;
+  --purple: #A78BFA;
+  --white: #9CA3AF;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+input, textarea {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  outline: none;
+}
