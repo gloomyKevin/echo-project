@@ -6,17 +6,19 @@
 }
 
 :root {
-  --bg: #0F1419;
-  --bg-light: #1A2028;
+  --bg: #0A0E14;
+  --bg-card: rgba(18, 24, 32, 0.88);
   --text: #E8E6E3;
-  --text-dim: #6B7280;
-  --text-muted: #3D4450;
+  --text-dim: rgba(232, 230, 227, 0.5);
+  --text-muted: rgba(232, 230, 227, 0.2);
+  --border: rgba(255, 255, 255, 0.08);
 
   --warm: #F59E42;
-  --blue: #5B8DEF;
+  --blue: #5B9CF5;
   --green: #4ADE80;
   --purple: #A78BFA;
-  --white: #9CA3AF;
+  --red: #F87171;
+  --white-star: #C9CDD4;
 }
 
 html, body, #root {
@@ -25,7 +27,7 @@ html, body, #root {
   overflow: hidden;
   background: var(--bg);
   color: var(--text);
-  font-family: -apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, 'PingFang SC', 'SF Pro Text', 'Helvetica Neue', sans-serif;
   user-select: none;
   -webkit-user-select: none;
 }
